@@ -18,7 +18,7 @@ Copy the example .env file.
 $ cp .env.local.example .env.local
 ```
 
-Add your Stripe API keys in the new `.env.local` file.
+Add your Stripe API keys in the new `.env.local` file. Additionally, if you are going to run on something other than localhost, add your hostname to the `NEXT_PUBLIC_HOSTNAME` env variable. If you don't do this, any payment methods requiring a redirect will try and redirect to `http://localhost:3000`.
 
 Next, install all project dependencies by running `npm install`
 
